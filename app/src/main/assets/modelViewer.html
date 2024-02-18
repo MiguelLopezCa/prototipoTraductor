@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- Import the component -->
+        <script
+                type="module"
+                src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+        ></script>
+        <model-viewer
+                id="paused-change-demo"
+                camera-controls
+                touch-action="pan-y"
+                autoplay
+                animation-name="anima1"
+                ar-modes="webxr scene-viewer"
+                scale="0.2 0.2 0.2"
+                shadow-intensity="1"
+                src="https://cdn.glitch.global/73947fa3-1da8-415e-8fc2-30f4e79591c1/untitled2.glb?v=1708223604325"
+                alt="An animated 3D model of a robot"
+        ></model-viewer>
+        <script>
+      (() => {
+        const modelViewer = document.querySelector("#paused-change-demo");
+
+        self.setInterval(() => {
+          modelViewer.animationName =
+            modelViewer.animationName === "anima1" ? "anima2" : "anima1";
+        }, 6500.0);
+      })();
+    </script>
+    </body>
+</html>
