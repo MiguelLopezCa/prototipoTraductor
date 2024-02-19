@@ -11,7 +11,7 @@ import com.example.modelviewer.utils.viewbinding.viewBinding
 class ModelViewerFragment : Fragment(R.layout.fragment_model_viewer) {
 
     private val binding by viewBinding(FragmentModelViewerBinding::bind)
-
+    
     @SuppressLint("SetJavaScriptEnabled")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
